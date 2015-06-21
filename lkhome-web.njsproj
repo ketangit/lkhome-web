@@ -5,7 +5,10 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <Name>lkhome-web</Name>
     <RootNamespace>lkhome-web</RootNamespace>
-    <NameOfLastUsedPublishProfile>lkhome - Web Deploy</NameOfLastUsedPublishProfile>
+    <NodeExeArguments>
+    </NodeExeArguments>
+    <DebuggerPort>
+    </DebuggerPort>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -22,7 +25,7 @@
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
     <ProjectView>ShowAllFiles</ProjectView>
     <NodejsPort>1337</NodejsPort>
-    <StartWebBrowser>true</StartWebBrowser>
+    <StartWebBrowser>True</StartWebBrowser>
     <IntermediateOutputPath>c:\\temp</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -35,8 +38,10 @@
     <Compile Include="app.js" />
     <Compile Include="appdb.js" />
     <Compile Include="appmqtt.js" />
+    <Compile Include="public\javascripts\utils.js" />
     <Compile Include="public\javascripts\bootstrap-3.3.5.js" />
     <Compile Include="public\javascripts\bootstrap-3.3.5.min.js" />
+    <Compile Include="public\javascripts\bootstrap-table-1.8.1.min.js" />
     <Compile Include="public\javascripts\jquery-2.1.4.js" />
     <Compile Include="public\javascripts\jquery-2.1.4.min.js" />
     <Compile Include="public\javascripts\modernizr-2.8.3.js" />
@@ -45,7 +50,7 @@
     <Compile Include="public\javascripts\respond-1.4.2.min.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\sensor.js" />
-    <Content Include="bin\www" />
+    <Compile Include="bin\www" />
     <Content Include="package.json" />
     <Content Include="public\favicon.ico" />
     <Content Include="public\fonts\glyphicons-halflings-regular.eot" />
@@ -57,15 +62,16 @@
     <Content Include="public\stylesheets\bootstrap-3.3.5.css" />
     <Content Include="public\stylesheets\bootstrap-3.3.5.css.map" />
     <Content Include="public\stylesheets\bootstrap-3.3.5.min.css" />
+    <Content Include="public\stylesheets\bootstrap-table-1.8.1.min.css" />
     <Content Include="public\stylesheets\style.css" />
-    <Content Include="public\stylesheets\style.styl" />
+    <Content Include="public\test.html" />
+    <Content Include="readme.md" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
     <Content Include="views\error.jade" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
-    <Folder Include="data\" />
     <Folder Include="public\" />
     <Folder Include="public\fonts\" />
     <Folder Include="public\images\" />

@@ -1,16 +1,24 @@
 ﻿var express = require('express');
-var router = express.Router();
+var sensor = express.Router();
 var DB = require('../appdb.js');
 
-router.get('/', function (req, res) {
+sensor.use(function (req, res, next) {
+    next();
+});
+
+sensor.get('/', function(req, res) {
+    var message = "Viewing sensor status";
+    res.render('sensor', { title: 'Sensor Status', message: message, year: new Date().getFullYear() });
+});
+
+sensor.get('/data', function (req, res, next) {
     DB.all("SELECT * FROM SENSOR_STATUS ORDER BY datetime DESC LIMIT 10", function (error, rows) {
         if (error !== null) {
             next(err);
         } else {
-            var message = rows.length > 0 ? "Viewing sensor status" : "No data found for sensors";
-            res.render('sensor', { title: 'Sensor Status', message: message, year: new Date().getFullYear(), rows: rows });
+            res.json(rows);
         }
-    });
+    }); 
 });
 
-module.exports = router;
+module.exports.sensor = sensor;

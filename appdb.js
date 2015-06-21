@@ -1,9 +1,13 @@
 ﻿// sqllite3
 var fs = require("fs");
-var file = "./data/sensor.db";
+var folder = "./data";
+var file = folder + "/sensor.db";
 var exists = fs.existsSync(file);
 if (!exists) {
     console.log("Creating DB file - " + file);
+    if (!fs.existsSync(folder)) {
+        fs.mkdirSync(folder);
+    }
     fs.openSync(file, "w");
 } else {
 	console.log("Reading DB file - " + file);

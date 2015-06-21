@@ -3,11 +3,11 @@
 block content
   h2 #{title}
   h3 #{message}
-  table
-      - for (var r in rows)
-        tr
-            td= rows[r].type
-            td= rows[r].status
-            td= moment(rows[r].datetime).format("MMMM Do YYYY, h:mm:ss a")
+  table.table-striped.table-bordered(data-toggle="table" data-url="/sensor/data")
+    thead
+      tr
+        th(data-field="type" data-halign="center" data-align="left") Name
+        th(data-field="status" data-halign="center" data-align="left") Status
+        th(data-field="datetime" data-formatter="dateFormatter" data-halign="center" data-align="right") DateTime
   br
     

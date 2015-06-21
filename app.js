@@ -26,13 +26,9 @@ app.locals.moment = require('moment');
 var mqtt = require('./appmqtt.js');
 mqtt.init('ws://code.oneechotech.com:9009');
 
-// setup and load routes
-var routes = require('./routes/index');
-var sensor = require('./routes/sensor');
-
-// attaching routes to the application
-app.use('/', routes);
-app.use('/sensor', sensor);
+// setup and attaching routes to the application
+app.use('/', require('./routes/index'));
+app.use('/sensor', require('./routes/sensor').sensor);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
