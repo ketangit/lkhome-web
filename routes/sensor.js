@@ -12,7 +12,7 @@ sensor.get('/', function(req, res) {
 });
 
 sensor.get('/data', function (req, res, next) {
-    DB.all("SELECT * FROM SENSOR_STATUS ORDER BY datetime DESC LIMIT 10", function (error, rows) {
+    DB.all("SELECT * FROM SENSOR_STATUS ORDER BY datetime DESC LIMIT 20", function (error, rows) {
         if (error !== null) {
             next(err);
         } else {

@@ -75,5 +75,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # Visual Studio files
+*.suo
 .ntvs_analysis.dat
 data/
+obj/
