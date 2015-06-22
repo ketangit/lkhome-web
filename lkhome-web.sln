@@ -4,8 +4,6 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "lkhome-web", "lkhome-web.njsproj", "{842CE8A0-0EC1-4CB5-A301-A99254941BB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureKeepWarm", "AzureKeepWarm\AzureKeepWarm.csproj", "{472440BF-1A01-4056-830E-019EA0FD8438}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,10 +14,6 @@ Global
 		{842CE8A0-0EC1-4CB5-A301-A99254941BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{842CE8A0-0EC1-4CB5-A301-A99254941BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{842CE8A0-0EC1-4CB5-A301-A99254941BB2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{472440BF-1A01-4056-830E-019EA0FD8438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{472440BF-1A01-4056-830E-019EA0FD8438}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{472440BF-1A01-4056-830E-019EA0FD8438}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{472440BF-1A01-4056-830E-019EA0FD8438}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
